@@ -193,6 +193,10 @@ body {
     width: 35px; /* Further adjust size for very small screens */
     height: 35px;
   }
+   .number li:hover::after{
+    top: 55px; /* Adjust position of line */
+  }
+
 
   .button-container button {
     padding: 6px 12px; /* Further reduce button size */
