@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osama Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="number">
+                <ol>
+                    <li id="num-1">1</li>
+                    <li id="num-2">2</li>
+                    <li id="num-3">3</li>
+                    <li id="num-4">4</li>
+                    <li id="num-5">5</li>
+                    <li id="num-6">6</li>
+                </ol>
+                <div class="line"></div>
+                <div class="question-container">
+                    <div class="question" id="question-1">
+                        <h3>Question 1: Do you like coding?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1" value="A">
+                                <span class="circle">A</span> Yes
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="B">
+                                <span class="circle">B</span> No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question-2" style="display:none;">
+                        <h3>Question 2: Are you a student?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2" value="A">
+                                <span class="circle">A</span> Yes
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="B">
+                                <span class="circle">B</span> No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question-3" style="display:none;">
+                        <h3>Question 3: Do you enjoy outdoor activities?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3" value="A">
+                                <span class="circle">A</span> Yes
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="B">
+                                <span class="circle">B</span> No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question-4" style="display:none;">
+                        <h3>Question 4: Have you ever traveled abroad?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4" value="A">
+                                <span class="circle">A</span> Yes
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="B">
+                                <span class="circle">B</span> No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question-5" style="display:none;">
+                        <h3>Question 5: Do you like reading books?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5" value="A">
+                                <span class="circle">A</span> Yes
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="B">
+                                <span class="circle">B</span> No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question-6" style="display:none;">
+                        <h3>Question 6: Are you a morning person?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q6" value="A">
+                                <span class="circle">A</span> Yes
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6" value="B">
+                                <span class="circle">B</span> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button id="prev" onclick="changeQuestion(-1)">&#9664;</button>
+                    <button id="submitButton" style="display: none;">Submit</button>
+
+                    <button id="next" onclick="changeQuestion(1)">&#9654;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

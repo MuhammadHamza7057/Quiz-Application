@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 90%; /* Change to a percentage for responsiveness */
+  max-width: 600px; /* Set a maximum width */
+  height: auto; /* Change height to auto */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 4px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number ol {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+}
+
+.number li {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  color: black;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.number li:hover {
+  background-color: black;
+  color: white;
+}
+
+.number li:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: height 0.3s ease;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(30, 29, 29, 0.437);
+  margin: 20px 0;
+  transition: background-color 0.3s ease;
+}
+
+.question-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.question {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.question.active {
+  display: block;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.option input {
+  display: none;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover .circle {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.option input:checked + .circle {
+  background-color: black;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#prev {
+  background-color: #007bff;
+  color: white;
+}
+
+#next {
+  background-color: #007bff;
+  color: white;
+}
+
+#submit {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .box {
+    width: 95%; /* Adjust width for smaller screens */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .number li {
+    width: 40px; /* Adjust size of number circles */
+    height: 40px;
+  }
+
+  .button-container button {
+    padding: 8px 16px; /* Reduce button size */
+    font-size: 14px; /* Reduce font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .number li {
+    width: 35px; /* Further adjust size for very small screens */
+    height: 35px;
+  }
+
+  .button-container button {
+    padding: 6px 12px; /* Further reduce button size */
+    font-size: 12px; /* Further reduce font size */
+  }
+}
